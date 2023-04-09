@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
+
+/* CSS RESET */
+* { 
+    padding:0;
+    margin:0;
+    border:0;
+    vertical-align:baseline;
+    list-style:none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+
+    min-height: 100vh;
+    background: #412722;
+
+    color: #E5DADA;
+}
+
+#out-turn{
+    font-size: 5rem;
+    padding: 1rem;
+    background-color: #71756838;
+    border-radius: 2%;
+} #out-turn b{
+    font-size: 5rem;
+    color: #BCED09;
+} #out-turn span{
+    font-size: 5rem;
+    color: #D64045;
+}
+
+#game{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#gameboard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    width: 600px;
+}
+
+.unsigned{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: rgba(0, 0, 0, 0);
+    font-family: sans-serif;
+    font-size: 1rem;
+
+    width: 150px;
+    height: 150px;
+    background-color: #00000017;
+
+    transition: .5s;
+} .unsigned:hover{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: black;
+    font-family: sans-serif;
+    font-size: 1.3rem;
+    
+    border-radius: 2%;
+    width: 150px;
+    height: 150px;
+    background: #BCED09;
+    cursor: pointer;
+    
+    transition: .5s;
+} .unsigned:hover::after{
+    content: 'Jogar aqui!';
+}
+
+#q1, #q2, #q4, #q5{
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+} #q3, #q6{
+    border-bottom: 2px solid black;
+} #q7, #q8{
+    border-right: 2px solid black;
+}
+
+.signedX{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #E5DADA;
+    font-family: sans-serif;
+    font-size: 4.5rem;
+
+    width: 150px;
+    height: 150px;
+    background-color: #d640457c;
+
+    transition: .5s;
+} .signedX:hover{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #E5DADA;
+    font-family: sans-serif;
+    font-size: 4.7rem;
+
+    width: 150px;
+    height: 150px;
+    background-color: #D64045;
+
+    transition: .5s;
+}
+
+.signedO{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #E5DADA;
+    font-family: sans-serif;
+    font-size: 4.5rem;
+
+    width: 150px;
+    height: 150px;
+    background-color: #71756870;
+
+    transition: .5s;
+} .signedO:hover{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #E5DADA;
+    font-family: sans-serif;
+    font-size: 4.7rem;
+
+    width: 150px;
+    height: 150px;
+    background-color: #717568;
+
+    transition: .5s;
+}
+
+#winner{
+    font-size: 2rem;
+}
