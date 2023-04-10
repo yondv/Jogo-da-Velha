@@ -5,6 +5,17 @@ let xIsPlaying;
 const game = document.getElementById('game');
 const winScreen = document.getElementById('win-screen');
 winScreen.style.display = 'none';
+const gameboardDefault = `<div id="gameboard">
+<div onclick="makePlay(1)" id="q1" class="unsigned"></div>
+<div onclick="makePlay(2)" id="q2" class="unsigned"></div>
+<div onclick="makePlay(3)" id="q3" class="unsigned"></div>
+<div onclick="makePlay(4)" id="q4" class="unsigned"></div>
+<div onclick="makePlay(5)" id="q5" class="unsigned"></div>
+<div onclick="makePlay(6)" id="q6" class="unsigned"></div>
+<div onclick="makePlay(7)" id="q7" class="unsigned"></div>
+<div onclick="makePlay(8)" id="q8" class="unsigned"></div>
+<div onclick="makePlay(9)" id="q9" class="unsigned"></div>
+</div>`;
 
 const pickQ = () =>{
     if(q.length > 1){
@@ -53,9 +64,9 @@ function Win(whoWin){
     const winner = document.getElementById('winner');
 
     if(whoWin == 'x'){
-        winner.textContent = 'O [X] venceu!';
+        winner.outerHTML = '<h1 id="winner">O <span>X</span> ganhou!</h1>'
     } else{
-        winner.textContent = 'O [O] venceu!';
+        winner.textContent = '<h1 id="winner">O <b>O</b> ganhou!</h1>';
     }
 }
 
@@ -132,6 +143,24 @@ function makePlay(id){
     }
 
     checkWin();
+}
+
+function restartGame(){
+    console.log('tentando reiniciar o jogo');
+    // Dar reset no turn
+    turn = 0;
+
+    // Acionar novamente o display na tela
+    let gameboard = document.getElementById('gameboard');
+
+    game.style.display = 'flex';
+    winScreen.style.display = 'none';
+    // Resetar butões na tela
+    gameboard.outerHTML = gameboardDefault;
+
+    // chamar funções PICKQ e CHANGETURN novamente
+    pickQ();
+    changeTurn();
 }
 
 onload(pickQ(), changeTurn());
