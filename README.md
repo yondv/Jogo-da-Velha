@@ -8,4 +8,5 @@ Fiz com o objetivo de treinar e melhorar minhas habilidades nas linguagens.
     <li>Resolver bugs. <b>(Feito 👌)</b></li>
     <li>Melhorar tela de vitória. <b>(Feito 👌)</b></li>
     <li>Sistema de empate.</li>
+    <li>Tornar responsivo para mobile também.</li>
 </ul>

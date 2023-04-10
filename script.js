@@ -4,7 +4,6 @@ let xIsPlaying;
 
 const game = document.getElementById('game');
 const winScreen = document.getElementById('win-screen');
-winScreen.style.display = 'none';
 const gameboardDefault = `<div id="gameboard">
 <div onclick="makePlay(1)" id="q1" class="unsigned"></div>
 <div onclick="makePlay(2)" id="q2" class="unsigned"></div>
@@ -16,6 +15,8 @@ const gameboardDefault = `<div id="gameboard">
 <div onclick="makePlay(8)" id="q8" class="unsigned"></div>
 <div onclick="makePlay(9)" id="q9" class="unsigned"></div>
 </div>`;
+
+winScreen.style.display = 'none';
 
 const pickQ = () =>{
     if(q.length > 1){
@@ -66,7 +67,7 @@ function Win(whoWin){
     if(whoWin == 'x'){
         winner.outerHTML = '<h1 id="winner">O <span>X</span> ganhou!</h1>'
     } else{
-        winner.textContent = '<h1 id="winner">O <b>O</b> ganhou!</h1>';
+        winner.outerHTML = '<h1 id="winner">O <b>O</b> ganhou!</h1>';
     }
 }
 
