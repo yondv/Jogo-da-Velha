@@ -64,40 +64,56 @@ function checkWin(){
     pickQ();
 
     // X AREA
-    if((q[0].className == 'signedX' && q[1].className == 'signedX' && q[2].className == 'signedX') == true){ // Horizontal X
+    if(q[0].className == 'signedX' && q[1].className == 'signedX' && q[2].className == 'signedX'){ // Horizontal X
+        console.log('Horizontal 1');
         Win('x');
-    } if((q[3].className == 'signedX' && q[4].className == 'signedX' && q[5].className == 'signedX') == true){ // Horizontal X
+    } else if(q[3].className == 'signedX' && q[4].className == 'signedX' && q[5].className == 'signedX'){ // Horizontal X
+        console.log('Horizontal 2');
         Win('x');
-    } if((q[6].className && q[7].className && q[8].className == 'signedX') == true){ // Horizontal X
+    } else if(q[6].className == 'signedX' && q[7].className == 'signedX' && q[8].className == 'signedX'){ // Horizontal X
+        console.log('Horizontal 3');
         Win('x');
-    } if((q[0].className == 'signedX' && q[3].className == 'signedX' && q[6].className == 'signedX') == true){ // Vertical X
+    } else if(q[0].className == 'signedX' && q[3].className == 'signedX' && q[6].className == 'signedX'){ // Vertical X
+        console.log('Vertical 1');
         Win('x');
-    } if((q[1].className == 'signedX' && q[4].className == 'signedX' && q[7].className == 'signedX') == true){ // Vertical X
+    } else if(q[1].className == 'signedX' && q[4].className == 'signedX' && q[7].className == 'signedX'){ // Vertical X
+        console.log('Vertical 2');
         Win('x');
-    } if((q[2].className == 'signedX' && q[5].className == 'signedX' && q[8].className == 'signedX') == true){ // Vertical X
+    } else if(q[2].className == 'signedX' && q[5].className == 'signedX' && q[8].className == 'signedX'){ // Vertical X
+        console.log('Vertical 3');
         Win('x');
-    } if((q[0].className == 'signedX' && q[4].className == 'signedX' && q[8].className == 'signedX') == true){ // Diagonal X
+    } else if(q[0].className == 'signedX' && q[4].className == 'signedX' && q[8].className == 'signedX'){ // Diagonal X
+        console.log('Diagonal 1');
         Win('x');
-    } if((q[2].className == 'signedX' && q[4].className == 'signedX' && q[6].className == 'signedX') == true){ // Diagonal X
+    } else if(q[2].className == 'signedX' && q[4].className == 'signedX' && q[6].className == 'signedX'){ // Diagonal X
+        console.log('Diagonal 2');
         Win('x');
     }
 
     // O AREA
     if(q[0].className == 'signedO' && q[1].className == 'signedO' && q[2].className == 'signedO'){ // Horizontal O
+        console.log('Horizontal 1');
         Win('o');
     } if(q[3].className == 'signedO' && q[4].className == 'signedO' && q[5].className == 'signedO'){ // Horizontal O
+        console.log('Horizontal 2');
         Win('o');
     } if(q[6].className == 'signedO' && q[7].className  == 'signedO' && q[8].className == 'signedO'){ // Horizontal O
+        console.log('Horizontal 3');
         Win('o');
     } if(q[0].className == 'signedO' && q[3].className == 'signedO' && q[6].className == 'signedO'){ // Vertical O
+        console.log('Vertical 1');
         Win('o');
     } if(q[1].className == 'signedO' && q[4].className == 'signedO' && q[7].className == 'signedO'){ // Vertical O
+        console.log('Vertical 2');
         Win('o');
     } if(q[2].className == 'signedO' && q[5].className == 'signedO' && q[8].className == 'signedO'){ // Vertical O
+        console.log('Vertical 3');
         Win('o');
     } if(q[0].className == 'signedO' && q[4].className == 'signedO' && q[8].className == 'signedO'){ // Diagonal O
+        console.log('Diagonal 1');
         Win('o');
     } if(q[2].className == 'signedO' && q[4].className == 'signedO' && q[6].className == 'signedO'){ // Diagonal O
+        console.log('Diagonal 2');
         Win('o');
     }
 }
