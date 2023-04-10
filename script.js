@@ -1,5 +1,5 @@
 let q = new Array();
-let turn = 2;
+let turn = 0;
 let xIsPlaying;
 
 const game = document.getElementById('game');
@@ -7,11 +7,13 @@ const winScreen = document.getElementById('win-screen');
 winScreen.style.display = 'none';
 
 const pickQ = () =>{
-    for(var i = 0; i<9; i++){
-        q.pop();
+    if(q.length > 1){
+        for(var i = 0; i<9; i++){
+            q.pop();
+        }
     }
     for(var i = 0; i<9; i++){
-        console.log('Recebendo item no vetor ' + document.getElementById('q'+(i+1)))
+        console.log('Recebendo item no vetor ' + document.getElementById('q'+(i+1)));
         q.push(document.getElementById('q'+(i+1)));
     }
     console.log('O vetor possui ' + q.length + ' alocações.');
@@ -22,12 +24,10 @@ const pickQ = () =>{
 let fillQ = (objectToFill, typeOfTheFill, ident) => {
     if(typeOfTheFill == 'x'){
         console.log('Preenchendo o quadrante com X');
-        objectToFill.className = 'signedX';
-        objectToFill.textContent = 'X'
+        objectToFill.outerHTML = `<div id="q${ident}" class="signedX">X</div>`;
     } else{
         console.log('Preenchendo o quadrante com O');
-        objectToFill.className = 'signedO';
-        objectToFill.textContent = 'O';
+        objectToFill.outerHTML = `<div id="q${ident}" class="signedO">O</div>`;
     }
 }
 
